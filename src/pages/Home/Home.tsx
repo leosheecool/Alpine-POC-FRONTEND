@@ -10,7 +10,6 @@ import "swiper/css";
 import { BottomBar, TripCard, NewsCard, SwiperCarousel } from "components";
 import styles from "./Home.module.scss";
 import cn from "classnames";
-import Header from "components/Header/Header";
 
 const Home = () => {
   const mockedData = {

@@ -19,7 +19,7 @@ const NewsCard = ({ article }: Props) => {
           alt=""
           src={article.authorPicture}
         />
-        <h3 className={styles.title}>{article.title}</h3>
+        <h4 className={styles.title}>{article.title}</h4>
       </div>
     </div>
   );
