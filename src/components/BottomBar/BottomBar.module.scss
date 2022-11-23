@@ -13,9 +13,13 @@
 }
 
 .menuBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
     border-color: transparent;
     border-radius: 50px;
     height: 70px;
     width: 70px;
+
 }
