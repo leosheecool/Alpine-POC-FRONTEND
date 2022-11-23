@@ -4,9 +4,11 @@ import ActiveHeart from "assets/icons/heart-active.png";
 import InactiveHeart from "assets/icons/heart-not-active.png";
 import CommentIcon from "assets/icons/comment.png";
 import cn from "classnames";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   trip: {
+    id: number;
     place: string;
     image: string;
     likeNumber: number;
@@ -16,8 +18,13 @@ type Props = {
 };
 
 const TripCard = ({ trip }: Props) => {
+  const navigation = useNavigate();
+
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      onClick={() => navigation(`/tripDetails/${trip.id}`)}
+    >
       <img src={trip.image} alt={trip.place} className={styles.img} />
       <div className={styles.overlay} />
       <div className={styles.info}>
