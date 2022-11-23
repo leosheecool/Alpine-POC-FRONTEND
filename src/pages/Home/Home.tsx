@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css";
 
-import { TripCard } from "components";
+import { BottomBar, TripCard } from "components";
 import styles from "./Home.module.scss";
 import cn from "classnames";
 
