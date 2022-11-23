@@ -8,6 +8,7 @@ import "swiper/css";
 import { BottomBar, TripCard } from "components";
 import styles from "./Home.module.scss";
 import cn from "classnames";
+import Header from "components/Header/Header";
 
 const Home = () => {
   const mockedData = [
@@ -79,6 +80,7 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
+      <Header />
       <h1 className={cn(styles.title, styles.mainTitle)}>Home</h1>
       <div className={styles.card}>
         <h2 className={styles.title}>Trips</h2>
