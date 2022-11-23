@@ -17,6 +17,7 @@
       "noEmit": true,
       "jsx": "react-jsx"
     },
-    "include": ["src", "public/sw.js", ".storybook/*.js"]
+    "include": ["src"]
+    
   }
   

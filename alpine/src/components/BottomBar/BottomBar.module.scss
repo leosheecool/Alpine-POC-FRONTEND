@@ -1,1 +1,14 @@
-@import '/styles/colors.scss'
+@import 'styles/colors';
+
+.container {
+    display: flex;
+    flex:1;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    background-color: $lightGrey;
+    height: 75px;
+    padding: 10px;
+
+}

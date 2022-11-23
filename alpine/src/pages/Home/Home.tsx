@@ -1,9 +1,9 @@
-import React from "react";
+import styles from "./Home.module.scss";
 import { BottomBar } from "components";
 
 const Home = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <p>Home</p>
       <BottomBar />
     </div>
