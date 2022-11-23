@@ -7,6 +7,8 @@ import "swiper/css";
 
 import { TripCard } from "components";
 import styles from "./Home.module.scss";
+import cn from "classnames";
+
 const Home = () => {
   const mockedData = [
     {
@@ -77,9 +79,12 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-      <p>Home</p>
+      <h1 className={cn(styles.title, styles.mainTitle)}>Home</h1>
       <div className={styles.card}>
-        <h2 className={styles.cardTitle}>Trips</h2>
+        <h2 className={styles.title}>Trips</h2>
+        <p className={styles.description}>
+          Here you can explore the popular trips
+        </p>
         <Swiper
           pagination={{
             dynamicBullets: true,
