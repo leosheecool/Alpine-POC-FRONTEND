@@ -17,7 +17,9 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#383838, #ffffff00, #ffffff00, #383838);
+  background: linear-gradient(#ffffff00, #ffffff00, #ffffff00, #383838),
+    linear-gradient(100deg, #ffffff00 80%, #383838),
+    linear-gradient(60deg, #ffffff00 80%, #383838);
 }
 
 .info {
@@ -39,7 +41,7 @@
 
 .likeContainer {
   position: absolute;
-  top: 20px;
+  bottom: 20px;
   right: 20px;
   z-index: 1;
 }
@@ -47,6 +49,6 @@
 .commentContainer {
   position: absolute;
   top: 20px;
-  left: 20px;
+  right: 20px;
   z-index: 1;
 }
