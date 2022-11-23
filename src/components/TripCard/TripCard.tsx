@@ -11,6 +11,7 @@ type Props = {
     image: string;
     likeNumber: number;
     commentNumber: number;
+    isFavorite?: boolean;
   };
 };
 
@@ -18,11 +19,16 @@ const TripCard = ({ trip }: Props) => {
   return (
     <div className={styles.container}>
       <img src={trip.image} alt={trip.place} className={styles.img} />
+      <div className={styles.overlay} />
       <div className={styles.info}>
         <h2>{trip.place}</h2>
       </div>
       <div className={cn(styles.actionBtnContainer, styles.likeContainer)}>
-        <img src={ActiveHeart} alt="like" className={styles.icon} />
+        <img
+          src={trip.isFavorite ? ActiveHeart : InactiveHeart}
+          alt="like"
+          className={styles.icon}
+        />
         <span>{trip.likeNumber}</span>
       </div>
       <div className={cn(styles.actionBtnContainer, styles.commentContainer)}>
