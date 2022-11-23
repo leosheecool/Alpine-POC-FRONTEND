@@ -5,16 +5,10 @@ import InactiveHeart from "assets/icons/heart-not-active.png";
 import CommentIcon from "assets/icons/comment.png";
 import cn from "classnames";
 import { useNavigate } from "react-router-dom";
+import { Trip } from "types/trip.types";
 
 type Props = {
-  trip: {
-    id: number;
-    place: string;
-    image: string;
-    likeNumber: number;
-    commentNumber: number;
-    isFavorite?: boolean;
-  };
+  trip: Trip;
 };
 
 const TripCard = ({ trip }: Props) => {
