@@ -1,0 +1,10 @@
+@import 'styles/colors';
+
+.container {
+    position: absolute;
+    bottom: 0;
+    background-color: $lightGrey;
+    height: 75px;
+   width: 100%;
+   padding: 10px;
+}

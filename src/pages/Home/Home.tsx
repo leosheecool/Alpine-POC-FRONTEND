@@ -1,5 +1,6 @@
 import { TripCard } from "components";
 import styles from "./Home.module.scss";
+import { BottomBar } from "components";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       />
     </div>
   );
+      <BottomBar />
 };
 
 export default Home;
