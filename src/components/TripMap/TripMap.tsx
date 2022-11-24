@@ -4,7 +4,6 @@ import { mockedTrip } from "mocked/trip";
 import styles from "./TripMap.module.scss";
 
 const Tripmap = () => {
-  console.log("pute");
   return (
     <div className={styles.container}>
       <MusicPlayer playlists={mockedTrip.playlists} />

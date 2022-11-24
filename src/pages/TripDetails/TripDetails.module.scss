@@ -1,6 +1,7 @@
 @import "styles/colors";
 
 .container {
+  position: relative;
   min-height: 100vh;
   // background-color: $white;
 }
@@ -39,27 +40,18 @@
   gap: 18px;
 }
 
-.navContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.navBtn {
   position: fixed;
   bottom: 40px;
   left: 50%;
   transform: translate(-50%, -50%);
-  .navBtn {
-    background-color: $liquidBlue;
-    width: 70px;
-    height: 70px;
-    padding: 15px;
-    border-radius: 100px;
-    border: 2px $white solid;
-    cursor: pointer;
-  }
-
-  .subTitle {
-    font: 600 16px/24px "Roboto", sans-serif;
-  }
+  background-color: $liquidBlue;
+  width: 70px;
+  height: 70px;
+  padding: 15px;
+  border-radius: 100px;
+  border: 2px $white solid;
+  cursor: pointer;
 }
 
 .header {
