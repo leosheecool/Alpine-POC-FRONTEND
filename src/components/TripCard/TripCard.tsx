@@ -25,7 +25,7 @@ const TripCard = ({ trip }: Props) => {
       </div>
       <div className={styles.infoContainer}>
         <div>
-          <h2>{trip.place}</h2>
+          <h3>{trip.place}</h3>
           <span>
             {trip.length || 0}km | ~{trip.duration}
           </span>

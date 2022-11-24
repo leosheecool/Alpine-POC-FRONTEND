@@ -28,13 +28,15 @@ const Home = () => {
           ))}
         </SwiperCarousel>
         <Separator />
-        <SwiperCarousel
+        <h2 className={styles.title}>Trips</h2>
+        <p className={styles.description}>Experience a road trip</p>
+        {mockedData.trips.map((trip) => (
+          <TripCard trip={trip} key={trip.id} />
+        ))}
+        {/* <SwiperCarousel
           data={{ title: "Trips", subtitle: "Experience a road trip" }}
         >
-          {mockedData.trips.map((trip) => (
-            <TripCard trip={trip} key={trip.id} />
-          ))}
-        </SwiperCarousel>
+        </SwiperCarousel> */}
         <BottomBar />
       </div>
     </div>
