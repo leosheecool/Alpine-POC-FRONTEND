@@ -5,7 +5,6 @@
     flex-direction: column;
     width: 100%;
     height: 145px;
-    border-radius: 5px;
     background-color: $white;
     padding:  13px 8px;
 }
@@ -39,7 +38,7 @@
     align-items: center;
     gap: 8px;
     padding: 7px 14px;
-    border-radius: 4px;
+    border-radius: 1px;
     background-color: $liquidBlue;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

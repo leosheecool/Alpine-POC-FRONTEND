@@ -2,7 +2,13 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css";
 
-import { BottomBar, TripCard, NewsCard, SwiperCarousel } from "components";
+import {
+  BottomBar,
+  TripCard,
+  NewsCard,
+  SwiperCarousel,
+  Header,
+} from "components";
 import styles from "./Home.module.scss";
 import cn from "classnames";
 import { mockedData } from "mocked/trip";
@@ -10,6 +16,7 @@ import { mockedData } from "mocked/trip";
 const Home = () => {
   return (
     <div>
+      <Header />
       <div className={styles.container}>
         <h1 className={cn(styles.title, styles.mainTitle)}>Home</h1>
         <SwiperCarousel
