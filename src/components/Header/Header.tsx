@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "assets/vectors/logo.svg";
 import bellIcon from "assets/icons/bell.png";
 import styles from "./Header.module.scss";
