@@ -1,10 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  BottomBar,
-  TripPicturesPreview,
-  TripDescription,
-  Map,
-} from "components";
+import { BottomBar, TripDescription, Map } from "components";
 import styles from "./TripDetails.module.scss";
 import PuffLoader from "react-spinners/PuffLoader";
 import { Trip } from "types/trip.types";
@@ -26,7 +21,7 @@ const TripDetails = () => {
       ) : (
         <>
           <img
-            src={trip.image}
+            src={trip.thumbnail}
             alt={trip.place}
             className={styles.headerImage}
           />
@@ -38,17 +33,35 @@ const TripDetails = () => {
           <div className={styles.main}>
             <TripDescription
               title={trip.place}
-              description="Un trajet parfait pour les balandes du week-end. Très agréable et très bien situé. Je recommande vivement !"
+              description={
+                trip.description || `A nice road trip in ${trip.place}`
+              }
               likeNumber={trip.likeNumber}
               commentNumber={trip.commentNumber}
               isFavorite={trip.isFavorite}
             />
+            {trip.pictures && trip.pictures.length > 0 && (
+              <div className={styles.card}>
+                <div className={styles.header}>
+                  <h2 className={styles.title}>Photos</h2>
+                  <p className={styles.link}>See All</p>
+                </div>
 
-            <TripPicturesPreview />
-            <div className={styles.mapContainer}>
+                <div className={styles.picturesContainer}>
+                  {trip.pictures.map((picture) => (
+                    <img
+                      src={picture}
+                      alt="trip preview"
+                      className={styles.picture}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+            <div className={styles.card}>
               <h2 className={styles.title}>Journey Preview</h2>
               <div className={styles.journeyPreview}>
-                <Map results={trip.route} />
+                <Map results={trip.route} hasDirectionIndications={false} />
               </div>
             </div>
           </div>

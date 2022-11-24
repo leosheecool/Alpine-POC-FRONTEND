@@ -1,7 +1,8 @@
 export type Trip = {
   id: number;
+  description?: string;
   place: string;
-  image: string;
+  thumbnail: string;
   likeNumber: number;
   commentNumber: number;
   isFavorite?: boolean;
@@ -16,4 +17,5 @@ export type Trip = {
     youtube?: string;
     appleMusic?: string;
   };
+  pictures?: string[];
 };

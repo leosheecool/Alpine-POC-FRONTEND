@@ -19,7 +19,7 @@ const TripCard = ({ trip }: Props) => {
         className={styles.imgContainer}
         onClick={() => navigation(`/tripDetails/${trip.id}`)}
       >
-        <img src={trip.image} alt={trip.place} className={styles.img} />
+        <img src={trip.thumbnail} alt={trip.place} className={styles.img} />
         <div className={styles.overlay} />
         <div className={styles.info}>
           <h2>{trip.place}</h2>
