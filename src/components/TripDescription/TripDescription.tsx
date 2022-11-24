@@ -32,7 +32,7 @@ const TripDescription = ({
           <p className={styles.subTitle}>Comments</p>
         </div>
         <div className={styles.likeBtn}>
-          <p className={styles.textBtn}>Favorites</p>
+          <p className={styles.textBtn}>{isFavorite ? "Unlike" : "Like"}</p>
           {isFavorite ? (
             <img src={activeHeart} alt="heart" />
           ) : (

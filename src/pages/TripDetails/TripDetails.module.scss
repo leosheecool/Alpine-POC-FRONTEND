@@ -61,3 +61,45 @@
     font: 600 16px/24px "Roboto", sans-serif;
   }
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+
+  &:last-of-type {
+    margin-bottom: 105px;
+  }
+}
+
+.journeyPreview {
+  height: 300px;
+}
+
+.title {
+  margin: 10px 0;
+}
+
+.picturesContainer {
+  display: flex;
+  overflow: scroll;
+  gap: 8px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .picture {
+    width: 70px;
+    height: 70px;
+    border-radius: 3px;
+    object-fit: cover;
+  }
+}
