@@ -9,6 +9,7 @@ const Settings = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
   const [isValid, setIsValid] = useState(false);
   const [color, setColor] = useColor("hex", "#121212");
+  const [selectedPresetColor, setSelectedPresetColor] = useState("#0000ff");
   const [selectedMode, setSelectedMode] = useState<"preset" | "custom">(
     "preset"
   );
@@ -62,13 +63,31 @@ const Settings = () => {
             alt="car"
             className={styles.carImg}
           />
+          <div className={styles.carInfo}>
+            <div className={styles.carStat}>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/115/115101.png"
+                alt="fuel pump"
+                height={24}
+              />
+              <span>324km left</span>
+            </div>
+            <div className={styles.carStat}>
+              <img
+                src="https://visualpharm.com/assets/647/Counter-595b40b75ba036ed117d5a86.svg"
+                alt="counter"
+                height={24}
+              />
+              <span>65 218kms</span>
+            </div>
+          </div>
           {/* Kilometrage + essence */}
           <h3>Customization</h3>
           <p>Choose your interior car's light:</p>
 
           <div className={styles.radioInputContainer}>
             <label htmlFor="preset" className={styles.label}>
-              Preset
+              Presets
               <input
                 id="preset"
                 type="radio"
@@ -92,16 +111,38 @@ const Settings = () => {
               <span className={styles.radioBtn} />
             </label>
           </div>
-
-          <ColorPicker
-            width={350}
-            height={228}
-            color={color}
-            onChange={setColor}
-            hideHSV
-            hideRGB
-            dark
-          />
+          {selectedMode === "custom" ? (
+            <ColorPicker
+              width={350}
+              height={110}
+              color={color}
+              onChange={setColor}
+              hideHSV
+              hideRGB
+              dark
+            />
+          ) : (
+            <div className={styles.presetColorContainer}>
+              {[
+                "#0000ff",
+                "#f5f5f5",
+                "#ff0000",
+                "#00a500",
+                "#ff8100",
+                "#a503a5",
+              ].map((presetColor) => (
+                <div
+                  className={styles.presetColor}
+                  style={{ backgroundColor: presetColor }}
+                  onClick={() => setSelectedPresetColor(presetColor)}
+                >
+                  {selectedPresetColor === presetColor && (
+                    <div className={styles.colorSelectedBadge} />
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
 
           {/* list next part to check */}
         </div>
