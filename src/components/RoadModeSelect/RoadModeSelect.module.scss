@@ -1,0 +1,25 @@
+@import 'styles/colors';
+
+.roadOptionsContainer {
+    margin-top: 10px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 75px;
+    .option{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &.isActive{
+            border-bottom: 3px solid $black;
+        }
+        .icon {
+            height: 30px;
+        }
+        .subTitle {
+            margin: 5px;
+            font: 500 14px 'Roboto', sans-serif;
+            color: $black;
+        }
+    }
+}
