@@ -1,25 +1,25 @@
-@import 'styles/colors';
+@import "styles/colors";
 
 .container {
-    position: fixed;
-    bottom: 0;
-    background-color: $lightGrey;
-    height: 75px;
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  position: fixed;
+  bottom: 0;
+  background-color: $lightGrey;
+  height: 75px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 99;
 }
 
 .menuBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    border-color: transparent;
-    border-radius: 50px;
-    height: 70px;
-    width: 70px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 50px;
+  height: 70px;
+  width: 70px;
 }

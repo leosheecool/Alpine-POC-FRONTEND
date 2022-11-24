@@ -29,7 +29,9 @@ const SwiperCarousel = ({ title, children }: Props) => {
         spaceBetween={30}
       >
         {children.map((child, index) => (
-          <SwiperSlide className={styles.slide}>{child}</SwiperSlide>
+          <SwiperSlide className={styles.slide} key={index}>
+            {child}
+          </SwiperSlide>
         ))}
       </Swiper>
     </div>
