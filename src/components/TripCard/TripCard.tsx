@@ -21,22 +21,28 @@ const TripCard = ({ trip }: Props) => {
       >
         <img src={trip.thumbnail} alt={trip.place} className={styles.img} />
         <div className={styles.overlay} />
-        <div className={styles.info}>
-          <h2>{trip.place}</h2>
-        </div>
+        <div className={styles.info}>{/* <h2>{trip.place}</h2> */}</div>
       </div>
-      <div className={styles.actionBtnContainer}>
-        <div className={styles.actionBtn}>
-          <img src={CommentIcon} alt="comment" className={styles.icon} />
-          <span>{trip.commentNumber}</span>
+      <div className={styles.infoContainer}>
+        <div>
+          <h3>{trip.place}</h3>
+          <span>
+            {trip.length || 0}km | ~{trip.duration}
+          </span>
         </div>
-        <div className={styles.actionBtn}>
-          <img
-            src={trip.isFavorite ? ActiveHeart : InactiveHeart}
-            alt="like"
-            className={styles.icon}
-          />
-          <span>{trip.likeNumber}</span>
+        <div className={styles.actionBtnContainer}>
+          <div className={styles.actionBtn}>
+            <img src={CommentIcon} alt="comment" className={styles.icon} />
+            <span>{trip.commentNumber}</span>
+          </div>
+          <div className={styles.actionBtn}>
+            <img
+              src={trip.isFavorite ? ActiveHeart : InactiveHeart}
+              alt="like"
+              className={styles.icon}
+            />
+            <span>{trip.likeNumber}</span>
+          </div>
         </div>
       </div>
     </div>

@@ -2,22 +2,29 @@ import styles from "./BottomBar.module.scss";
 import { ReactComponent as MapSvg } from "assets/vectors/map-location.svg";
 import { ReactComponent as SettingsSvg } from "assets/vectors/settings.svg";
 import { ReactComponent as HomeSvg } from "assets/vectors/home.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import cn from "classnames";
+
 const BottomBar = () => {
   return (
     <div style={{ marginTop: 80 }}>
       <div className={styles.container}>
-        <Link to={"/home"} className={styles.menuBtn}>
-          <HomeSvg height={30} width={30} />
-        </Link>
+        <NavLink
+          to={"/home"}
+          className={({ isActive }) =>
+            cn(styles.menuBtn, { [styles.activeLink]: isActive })
+          }
+        >
+          <HomeSvg height={30} width={30} className={styles.icon} />
+        </NavLink>
 
-        <Link to={"/trips"} className={styles.menuBtn}>
-          <MapSvg height={30} width={30} />
-        </Link>
+        <NavLink to={"/trips"} className={styles.menuBtn}>
+          <MapSvg height={30} width={30} className={styles.icon} />
+        </NavLink>
 
-        <Link to={"/settings"} className={styles.menuBtn}>
-          <SettingsSvg height={30} width={30} />
-        </Link>
+        <NavLink to={"/settings"} className={styles.menuBtn}>
+          <SettingsSvg height={30} width={30} className={styles.icon} />
+        </NavLink>
       </div>
     </div>
   );

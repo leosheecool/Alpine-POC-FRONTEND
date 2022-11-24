@@ -11,11 +11,12 @@ const Header = () => {
         alt="notification"
       />
       <img src={logo} className={styles.logo} alt="logo" />
-      <img
+      {/* <img
         src="https://media-exp1.licdn.com/dms/image/C4D03AQGvX9cQRK2yTA/profile-displayphoto-shrink_800_800/0/1611953027407?e=1674691200&v=beta&t=jsXrsh9K17dl6uHBLpNZ2oISLjgDIW_RPwreCn0yFX4"
         className={styles.profileIcon}
         alt="profile"
-      />
+      /> */}
+      <div style={{ width: 24 }} />
     </div>
   );
 };
