@@ -1,6 +1,7 @@
 import styles from "./Trips.module.scss";
-import { BottomBar } from "components";
-import Tripmap from "pages/Tripmap/Tripmap";
+import { BottomBar, TripMap, SearchBar, RoadModeSelect } from "components";
+import { useState } from "react";
+
 const Trips = () => {
   return (
     <div className={styles.Container}>
