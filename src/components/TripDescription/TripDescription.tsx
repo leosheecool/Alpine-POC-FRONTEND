@@ -25,14 +25,14 @@ const TripDescription = ({
       <div className={styles.btnContainer}>
         <div className={styles.btn}>
           <h3>{likeNumber}</h3>
-          <p className={styles.subTitle}>J'aimes</p>
+          <p className={styles.subTitle}>Likes</p>
         </div>
         <div className={styles.btn}>
           <h3>{commentNumber}</h3>
-          <p className={styles.subTitle}>Commentaires</p>
+          <p className={styles.subTitle}>Comments</p>
         </div>
         <div className={styles.likeBtn}>
-          <p className={styles.textBtn}>Favoris</p>
+          <p className={styles.textBtn}>Favorites</p>
           {isFavorite ? (
             <img src={activeHeart} alt="heart" />
           ) : (

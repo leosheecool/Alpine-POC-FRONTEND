@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { BottomBar } from "components";
+import { BottomBar, TripPicturesPreview } from "components";
 import styles from "./TripDetails.module.scss";
 import PuffLoader from "react-spinners/PuffLoader";
 import { Trip } from "types/trip.types";
 import { tripMocked } from "mocked/trip";
 import { TripDescription } from "components";
+import { ReactComponent as NavigationSvg } from "assets/vectors/navigation.svg";
 
 const TripDetails = () => {
   const [trip, setTrip] = useState<Trip>(tripMocked);
@@ -38,9 +39,21 @@ const TripDetails = () => {
               commentNumber={trip.commentNumber}
               isFavorite={trip.isFavorite}
             />
+
+            <TripPicturesPreview />
+          </div>
+          <div className={styles.navContainer}>
+            <NavigationSvg
+              className={styles.navBtn}
+              fill="#FFF"
+              height={30}
+              width={30}
+            />
+            <span className={styles.subTitle}>Start Now</span>
           </div>
         </>
       )}
+
       <BottomBar />
     </div>
   );
