@@ -1,7 +1,7 @@
 import styles from "./BottomBar.module.scss";
 import { ReactComponent as Route } from "assets/vectors/route.svg";
 import { ReactComponent as Comment } from "assets/vectors/comment.svg";
-import Logo from "assets/images/Alpine-emblem.png";
+import Logo from "assets/vectors/Logo.svg";
 import { NavLink } from "react-router-dom";
 import cn from "classnames";
 
@@ -24,7 +24,6 @@ const BottomBar = () => {
 
         <NavLink to={"/settings"} className={styles.menuBtn}>
           <img src={Logo} alt="logo" className={styles.logo} />
-          {/* <SettingsSvg height={30} width={30} className={styles.icon} /> */}
         </NavLink>
       </div>
     </div>
