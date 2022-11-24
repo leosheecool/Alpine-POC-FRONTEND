@@ -1,55 +1,62 @@
+@import "styles/colors";
+
 .container {
+  margin-bottom: 20px;
+}
+
+.imgContainer {
   position: relative;
   overflow: hidden;
   // width: 400px;
   width: 100%;
-  border-radius: 20px;
+  // border-radius: 20px;
   max-width: 400px;
 }
 
 .img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
+
 .overlay {
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#ffffff00, #ffffff00, #ffffff00, #383838),
-    linear-gradient(100deg, #ffffff00 80%, #383838),
-    linear-gradient(60deg, #ffffff00 80%, #383838);
+  // background: radial-gradient(#383838, #ffffff00);
+  background: linear-gradient(#ffffff00 60%, #383838);
 }
 
 .info {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, 50%);
   padding: 20px;
   color: white;
-  width: 100%;
+  // width: 100%;
 }
 
 .actionBtnContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 10px;
   align-items: center;
-  color: white;
+  color: $darkGrey-1;
+  margin: 10px 0;
 }
 
-.likeContainer {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1;
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: $darkGrey-1;
+  cursor: pointer;
 }
 
-.commentContainer {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1;
+.icon {
+  width: 24px;
 }
