@@ -161,10 +161,8 @@ const Map = ({
         results[0].coordinates.lon,
         results[0].coordinates.lat,
       ]);
-      console.log("results[0] ", results[0].coordinates);
       const waypointsLength = results.length;
       for (let i = 1; i < waypointsLength - 1; i++) {
-        console.log("results[i] ", results[i].coordinates);
         directions.addWaypoint(i, [
           results[i].coordinates.lon,
           results[i].coordinates.lat,
@@ -174,10 +172,6 @@ const Map = ({
         results[waypointsLength - 1].coordinates.lon,
         results[waypointsLength - 1].coordinates.lat,
       ]);
-      console.log(
-        "results[waypointsLength - 1] ",
-        results[waypointsLength - 1].coordinates
-      );
     },
     [results, directions]
   );
@@ -185,7 +179,6 @@ const Map = ({
   React.useEffect(() => {
     const node = mapNode.current;
     if (typeof window === "undefined" || node === null) return;
-    console.log("ok");
     const mapboxMap = new mapboxgl.Map({
       container: node,
       accessToken: process.env.REACT_APP_MAPBOX_TOKEN,
@@ -197,10 +190,16 @@ const Map = ({
       zoom,
     });
 
-    console.log("ok2");
-
     if (!results) return;
-    if (hasDirectionIndications) mapboxMap.addControl(directions, "top-left");
+    mapboxMap.addControl(directions, "top-left");
+    const control = document.getElementsByClassName(
+      "mapboxgl-control-container"
+    )[0];
+    if (!hasDirectionIndications) {
+      try {
+        control?.classList.add(styles.hideDirection);
+      } catch {}
+    }
     mapboxMap.on("load", () => onLoad(mapboxMap, results));
 
     return () => {
