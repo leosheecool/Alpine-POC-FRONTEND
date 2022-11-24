@@ -3,7 +3,7 @@
 .container {
   position: fixed;
   bottom: 0;
-  background-color: $lightGrey;
+  background-color: $white;
   height: 75px;
   width: 100%;
   padding: 10px;
@@ -22,4 +22,14 @@
   border-radius: 50px;
   height: 70px;
   width: 70px;
+}
+
+.icon {
+  color: $darkGrey;
+}
+
+.activeLink {
+  .icon {
+    color: black;
+  }
 }

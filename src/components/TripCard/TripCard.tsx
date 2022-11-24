@@ -2,8 +2,7 @@ import React from "react";
 import styles from "./TripCard.module.scss";
 import ActiveHeart from "assets/icons/heart-active.png";
 import InactiveHeart from "assets/icons/heart-not-active.png";
-import CommentIcon from "assets/icons/comment.png";
-import cn from "classnames";
+import CommentIcon from "assets/vectors/comment.svg";
 import { useNavigate } from "react-router-dom";
 import { Trip } from "types/trip.types";
 
@@ -15,26 +14,36 @@ const TripCard = ({ trip }: Props) => {
   const navigation = useNavigate();
 
   return (
-    <div
-      className={styles.container}
-      onClick={() => navigation(`/tripDetails/${trip.id}`)}
-    >
-      <img src={trip.image} alt={trip.place} className={styles.img} />
-      <div className={styles.overlay} />
-      <div className={styles.info}>
-        <h2>{trip.place}</h2>
+    <div className={styles.container}>
+      <div
+        className={styles.imgContainer}
+        onClick={() => navigation(`/tripDetails/${trip.id}`)}
+      >
+        <img src={trip.thumbnail} alt={trip.place} className={styles.img} />
+        <div className={styles.overlay} />
+        <div className={styles.info}>{/* <h2>{trip.place}</h2> */}</div>
       </div>
-      <div className={cn(styles.actionBtnContainer, styles.likeContainer)}>
-        <img
-          src={trip.isFavorite ? ActiveHeart : InactiveHeart}
-          alt="like"
-          className={styles.icon}
-        />
-        <span>{trip.likeNumber}</span>
-      </div>
-      <div className={cn(styles.actionBtnContainer, styles.commentContainer)}>
-        <img src={CommentIcon} alt="comment" className={styles.icon} />
-        <span>{trip.commentNumber}</span>
+      <div className={styles.infoContainer}>
+        <div>
+          <h3>{trip.place}</h3>
+          <span>
+            {trip.length || 0}km | ~{trip.duration}
+          </span>
+        </div>
+        <div className={styles.actionBtnContainer}>
+          <div className={styles.actionBtn}>
+            <img src={CommentIcon} alt="comment" className={styles.icon} />
+            <span>{trip.commentNumber}</span>
+          </div>
+          <div className={styles.actionBtn}>
+            <img
+              src={trip.isFavorite ? ActiveHeart : InactiveHeart}
+              alt="like"
+              className={styles.icon}
+            />
+            <span>{trip.likeNumber}</span>
+          </div>
+        </div>
       </div>
     </div>
   );

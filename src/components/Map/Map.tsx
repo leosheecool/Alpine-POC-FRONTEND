@@ -4,7 +4,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import mapboxgl from "mapbox-gl";
 import styles from "./Map.module.scss";
 import getCenter from "geolib/es/getCenter";
-import pictureIcon from "assets/icons/picture.png";
+// import pictureIcon from "assets/icons/picture.png";
 // import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
 // @ts-ignore
 import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions";
@@ -25,9 +25,16 @@ type Props = {
   center?: mapboxgl.LngLatLike;
   selectedWaypoints?: mapboxgl.LngLatLike[];
   zoom?: number;
+  hasDirectionIndications?: boolean;
 };
 
-const Map = ({ results, center, selectedWaypoints, zoom = 9 }: Props) => {
+const Map = ({
+  results,
+  center,
+  selectedWaypoints,
+  zoom = 9,
+  hasDirectionIndications = true,
+}: Props) => {
   const mapNode = useRef(null);
 
   const coordinates = useMemo(
@@ -193,7 +200,7 @@ const Map = ({ results, center, selectedWaypoints, zoom = 9 }: Props) => {
     console.log("ok2");
 
     if (!results) return;
-    mapboxMap.addControl(directions, "top-left");
+    if (hasDirectionIndications) mapboxMap.addControl(directions, "top-left");
     mapboxMap.on("load", () => onLoad(mapboxMap, results));
 
     return () => {
@@ -207,6 +214,7 @@ const Map = ({ results, center, selectedWaypoints, zoom = 9 }: Props) => {
     directions,
     zoom,
     selectedWaypoints,
+    hasDirectionIndications,
   ]);
 
   return (

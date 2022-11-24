@@ -1,19 +1,30 @@
-@import 'styles/colors';
+@import "styles/colors";
 
 .container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 145px;
-    border-radius: 5px;
+    height: fit-content;
     background-color: $white;
     padding:  13px 8px;
 }
 
 .description {
-    margin: 8px 0;
-    font:  italic 400 12px 'Roboto', sans-serif;
-    color: $darkGrey;
+  margin: 8px 0;
+  font: italic 400 12px "Roboto", sans-serif;
+  color: $darkGrey;
+}
+
+.tripInfos{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.tripInfos{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
 }
 
 .btnContainer {
@@ -23,27 +34,27 @@
     align-items: flex-end;
     margin-top: 10px;
     gap: 15px;
-}
-.btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.subTitle {
-    font: 700 12px 'Roboto', sans-serif;
-    color: $darkGrey;
-}
-.likeBtn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 7px 14px;
-    border-radius: 4px;
-    background-color: $liquidBlue;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-.textBtn {
-    color: $white;
-    font: 700 14px 'Roboto', sans-serif;
+    .btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .subTitle {
+        font: 700 12px 'Roboto', sans-serif;
+        color: $darkGrey;
+    }
+    .likeBtn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 14px;
+        border-radius: 1px;
+        background-color: $liquidBlue;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .textBtn {
+        color: $white;
+        font: 700 14px 'Roboto', sans-serif;
+    }
 }

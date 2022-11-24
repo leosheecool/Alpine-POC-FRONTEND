@@ -1,0 +1,39 @@
+@import "styles/colors";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 145px;
+  background-color: $white;
+  padding: 13px 8px;
+  gap: 15px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .link {
+    color: rgb(76, 76, 244);
+    text-decoration: underline;
+  }
+}
+
+.picturesContainer {
+  display: flex;
+  overflow: scroll;
+  gap: 8px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .picture {
+    width: 70px;
+    height: 70px;
+    border-radius: 3px;
+    object-fit: cover;
+  }
+}

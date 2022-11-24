@@ -1,39 +1,105 @@
-@import 'styles/colors';
-
+@import "styles/colors";
 
 .container {
-    min-height: 100vh;
-    // background-color: $white;
+  min-height: 100vh;
+  // background-color: $white;
 }
 .loader {
-    top: 350px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .headerImage {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-    object-position: center;
-    margin-bottom: 5px;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 5px;
 }
 
 .profileIcon {
-    position: absolute;
-    top: 145px ;
-    right: 40px;
-    height: 45px;
-    border-radius: 100%;
-    object-fit: cover;
-    color: #fff;
+  position: absolute;
+  top: 145px;
+  right: 40px;
+  height: 45px;
+  // border-radius: 100%;
+  border-radius: 2px;
+  object-fit: cover;
+  color: #fff;
+  border: 2px $white solid;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+  gap: 18px;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .navBtn {
+    background-color: $liquidBlue;
+    width: 70px;
+    height: 70px;
+    padding: 15px;
+    border-radius: 100px;
     border: 2px $white solid;
+    cursor: pointer;
   }
 
-  .main {
-    flex:1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding:0 10px;
+  .subTitle {
+    font: 600 16px/24px "Roboto", sans-serif;
   }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+
+  &:last-of-type {
+    margin-bottom: 105px;
+  }
+}
+
+.journeyPreview {
+  height: 300px;
+}
+
+.title {
+  margin: 10px 0;
+}
+
+.picturesContainer {
+  display: flex;
+  overflow: scroll;
+  gap: 8px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .picture {
+    width: 70px;
+    height: 70px;
+    border-radius: 3px;
+    object-fit: cover;
+  }
+}

@@ -4,22 +4,24 @@
 }
 
 .container {
-  padding: 20px 10px;
   min-height: 100vh;
-}
-
-.title {
-  margin: 0;
-  margin-bottom: 10px;
-  color: #363636;
-}
-
-.mainTitle {
-  margin: 20px;
 }
 
 @media screen and (min-width: 460px) {
   .slide {
     width: 400px;
   }
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #363636;
+  padding: 0 20px;
+}
+
+.description {
+  margin: 15px 0;
+  color: #7c7c7c;
+  padding: 0 20px;
 }

@@ -1,19 +1,19 @@
 .container {
   overflow: hidden;
-  border-radius: 10px;
   max-width: 400px;
-  height: 400px;
   display: flex;
+  margin-bottom: 40px;
 }
 
 .image {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
+  aspect-ratio: 2/1;
 }
 
 .overlay {
-  border-radius: 10px;
+  // border-radius: 10px;
   position: absolute;
   top: 0;
   right: 0;
@@ -43,7 +43,7 @@
   height: 15%;
   margin: 10px;
   border: solid;
-  border-radius: 100%;
+  border-radius: 2px;
 }
 
 .title {

@@ -2,7 +2,14 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css";
 
-import { BottomBar, TripCard, NewsCard, SwiperCarousel } from "components";
+import {
+  BottomBar,
+  TripCard,
+  NewsCard,
+  SwiperCarousel,
+  Header,
+  Separator,
+} from "components";
 import styles from "./Home.module.scss";
 import cn from "classnames";
 import { mockedData } from "mocked/trip";
@@ -10,22 +17,26 @@ import { mockedData } from "mocked/trip";
 const Home = () => {
   return (
     <div>
+      <Header />
       <div className={styles.container}>
         <h1 className={cn(styles.title, styles.mainTitle)}>Home</h1>
         <SwiperCarousel
           data={{ title: "News", subtitle: "Catch up with Alpine" }}
         >
           {mockedData.news.map((article) => (
-            <NewsCard article={article} />
+            <NewsCard article={article} key={article.image + article.title} />
           ))}
         </SwiperCarousel>
-        <SwiperCarousel
+        <Separator />
+        <h2 className={styles.title}>Trips</h2>
+        <p className={styles.description}>Experience a road trip</p>
+        {mockedData.trips.map((trip) => (
+          <TripCard trip={trip} key={trip.id} />
+        ))}
+        {/* <SwiperCarousel
           data={{ title: "Trips", subtitle: "Experience a road trip" }}
         >
-          {mockedData.trips.map((trip) => (
-            <TripCard trip={trip} />
-          ))}
-        </SwiperCarousel>
+        </SwiperCarousel> */}
         <BottomBar />
       </div>
     </div>
