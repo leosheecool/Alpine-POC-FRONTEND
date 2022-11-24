@@ -1,5 +1,5 @@
-import logo from "assets/vectors/logo.svg";
-import bellIcon from "assets/icons/bell.png";
+import logo from "assets/images/logo.png";
+import moreIcon from "assets/icons/bell.png";
 import styles from "./Header.module.scss";
 
 const Header = () => {
@@ -7,7 +7,7 @@ const Header = () => {
     <div className={styles.container}>
       <img
         className={styles.notificationIcon}
-        src={bellIcon}
+        src={moreIcon}
         alt="notification"
       />
       <img src={logo} className={styles.logo} alt="logo" />

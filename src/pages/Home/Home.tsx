@@ -23,14 +23,14 @@ const Home = () => {
           data={{ title: "News", subtitle: "Catch up with Alpine" }}
         >
           {mockedData.news.map((article) => (
-            <NewsCard article={article} />
+            <NewsCard article={article} key={article.image + article.title} />
           ))}
         </SwiperCarousel>
         <SwiperCarousel
           data={{ title: "Trips", subtitle: "Experience a road trip" }}
         >
           {mockedData.trips.map((trip) => (
-            <TripCard trip={trip} />
+            <TripCard trip={trip} key={trip.id} />
           ))}
         </SwiperCarousel>
         <BottomBar />
