@@ -15,14 +15,12 @@ const TripCard = ({ trip }: Props) => {
 
   return (
     <div className={styles.container}>
-      <div
-        className={styles.imgContainer}
+      <img
+        src={trip.thumbnail}
         onClick={() => navigation(`/tripDetails/${trip.id}`)}
-      >
-        <img src={trip.thumbnail} alt={trip.place} className={styles.img} />
-        <div className={styles.overlay} />
-        <div className={styles.info}>{/* <h2>{trip.place}</h2> */}</div>
-      </div>
+        alt={trip.place}
+        className={styles.img}
+      />
       <div className={styles.infoContainer}>
         <div>
           <h3>{trip.place}</h3>

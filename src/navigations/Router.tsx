@@ -4,7 +4,7 @@ import { Home, Settings, TripDetails, Trips } from "pages";
 const Router = () => {
   return (
     <Routes>
-      <Route index element={<Home />} />
+      <Route index element={<Trips />} />
       <Route path="home" element={<Home />} />
       <Route path="tripDetails/:id" element={<TripDetails />} />
       <Route path="settings" element={<Settings />} />
