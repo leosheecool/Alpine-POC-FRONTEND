@@ -1,6 +1,8 @@
 export type Trip = {
   id: number;
   description?: string;
+  length?: number;
+  duration?: string;
   place: string;
   thumbnail: string;
   likeNumber: number;
