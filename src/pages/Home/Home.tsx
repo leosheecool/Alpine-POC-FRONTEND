@@ -1,109 +1,33 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Autoplay } from "swiper";
-
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css";
 
-import { BottomBar, TripCard } from "components";
+import { BottomBar, TripCard, NewsCard, SwiperCarousel } from "components";
 import styles from "./Home.module.scss";
 import cn from "classnames";
+import { mockedData } from "mocked/trip";
 
 const Home = () => {
-  const mockedData = [
-    {
-      place: "Paris",
-      image:
-        "https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg",
-      likeNumber: 100,
-      commentNumber: 10,
-      isFavorite: true,
-    },
-    {
-      place: "London",
-      image:
-        "https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg",
-      likeNumber: 100,
-      commentNumber: 10,
-      isFavorite: true,
-    },
-    {
-      place: "London",
-      image:
-        "https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg",
-      likeNumber: 100,
-      commentNumber: 10,
-      isFavorite: true,
-    },
-    {
-      place: "London",
-      image:
-        "https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg",
-      likeNumber: 100,
-      commentNumber: 10,
-      isFavorite: true,
-    },
-    {
-      place: "London",
-      image:
-        "https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg",
-      likeNumber: 100,
-      commentNumber: 10,
-      isFavorite: true,
-    },
-    {
-      place: "London",
-      image:
-        "https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg",
-      likeNumber: 100,
-      commentNumber: 10,
-      isFavorite: true,
-    },
-    {
-      place: "London",
-      image:
-        "https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg",
-      likeNumber: 100,
-      commentNumber: 10,
-      isFavorite: true,
-    },
-    {
-      place: "London",
-      image:
-        "https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg",
-      likeNumber: 100,
-      commentNumber: 10,
-      isFavorite: true,
-    },
-  ];
-
   return (
-    <div className={styles.container}>
-      <h1 className={cn(styles.title, styles.mainTitle)}>Home</h1>
-      <div className={styles.card}>
-        <h2 className={styles.title}>Trips</h2>
-        <p className={styles.description}>
-          Here you can explore the popular trips
-        </p>
-        <Swiper
-          pagination={{
-            dynamicBullets: true,
-          }}
-          slidesPerView={"auto"}
-          // navigation={true}
-          modules={[Pagination, Navigation, Autoplay]}
-          className={styles.swiper}
-          autoplay={{ delay: 5000 }}
-          spaceBetween={30}
+    <div>
+      <div className={styles.container}>
+        <h1 className={cn(styles.title, styles.mainTitle)}>Home</h1>
+        <SwiperCarousel
+          data={{ title: "News", subtitle: "Catch up with Alpine" }}
         >
-          {mockedData.map((trip, index) => (
-            <SwiperSlide className={styles.slide} key={trip.place + index}>
-              <TripCard trip={trip} />
-            </SwiperSlide>
+          {mockedData.news.map((article) => (
+            <NewsCard article={article} />
           ))}
-        </Swiper>
+        </SwiperCarousel>
+        <SwiperCarousel
+          data={{ title: "Trips", subtitle: "Experience a road trip" }}
+        >
+          {mockedData.trips.map((trip) => (
+            <TripCard trip={trip} />
+          ))}
+        </SwiperCarousel>
+        <BottomBar />
       </div>
-      <BottomBar />
     </div>
   );
 };

@@ -15,4 +15,17 @@ code {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
