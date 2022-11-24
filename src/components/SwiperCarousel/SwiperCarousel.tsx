@@ -8,21 +8,20 @@ import "swiper/css";
 import styles from "./SwiperCarousel.module.scss";
 
 type Props = {
-  title: string;
+  data: { title: string; subtitle: string };
   children: React.ReactNode[];
 };
 
-const SwiperCarousel = ({ title, children }: Props) => {
+const SwiperCarousel = ({ data, children }: Props) => {
   return (
     <div className={styles.card}>
-      <h2 className={styles.title}>Trips</h2>
-      <p className={styles.description}>{title}</p>
+      <h2 className={styles.title}>{data.title}</h2>
+      <p className={styles.description}>{data.subtitle}</p>
       <Swiper
         pagination={{
           dynamicBullets: true,
         }}
         slidesPerView={"auto"}
-        // navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
         className={styles.swiper}
         autoplay={{ delay: 5000 }}
