@@ -8,6 +8,7 @@ import {
   NewsCard,
   SwiperCarousel,
   Header,
+  Separator,
 } from "components";
 import styles from "./Home.module.scss";
 import cn from "classnames";
@@ -26,6 +27,7 @@ const Home = () => {
             <NewsCard article={article} key={article.image + article.title} />
           ))}
         </SwiperCarousel>
+        <Separator />
         <SwiperCarousel
           data={{ title: "Trips", subtitle: "Experience a road trip" }}
         >
