@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
-import { BottomBar, TripPicturesPreview } from "components";
+import {
+  BottomBar,
+  TripPicturesPreview,
+  TripDescription,
+  Map,
+} from "components";
 import styles from "./TripDetails.module.scss";
 import PuffLoader from "react-spinners/PuffLoader";
 import { Trip } from "types/trip.types";
-import { tripMocked } from "mocked/trip";
-import { TripDescription } from "components";
+import { mockedTrip } from "mocked/trip";
 import { ReactComponent as NavigationSvg } from "assets/vectors/navigation.svg";
 
 const TripDetails = () => {
-  const [trip, setTrip] = useState<Trip>(tripMocked);
+  const [trip, setTrip] = useState<Trip>(mockedTrip);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -41,6 +45,12 @@ const TripDetails = () => {
             />
 
             <TripPicturesPreview />
+            <div className={styles.mapContainer}>
+              <h2 className={styles.title}>Journey Preview</h2>
+              <div className={styles.journeyPreview}>
+                <Map results={trip.route} />
+              </div>
+            </div>
           </div>
           <div className={styles.navContainer}>
             <NavigationSvg
