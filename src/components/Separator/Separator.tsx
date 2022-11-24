@@ -3,9 +3,9 @@ import separatorImg from "assets/vectors/separator.svg";
 
 const Separator = () => {
   const style = {
-    width: "100%",
+    width: "80%",
     height: 28,
-    margin: "48px 0",
+    margin: "32px auto",
     backgroundSize: "auto 28px",
     backgroundPosition: "50%",
     backgroundImage: `url(${separatorImg})`,

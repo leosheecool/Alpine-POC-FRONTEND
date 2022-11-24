@@ -1,8 +1,7 @@
 import { Map } from "components";
 import MusicPlayer from "components/MusicPlayer/MusicPlayer";
 import { mockedTrip } from "mocked/trip";
-import React from "react";
-import styles from "./Tripmap.module.scss";
+import styles from "./TripMap.module.scss";
 
 const Tripmap = () => {
   return (

@@ -3,6 +3,8 @@
 .container {
   position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
   background-color: $white;
   height: 75px;
   width: 100%;
@@ -32,4 +34,8 @@
   .icon {
     color: black;
   }
+}
+
+.logo {
+  height: 30px;
 }

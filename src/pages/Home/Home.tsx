@@ -11,7 +11,6 @@ import {
   Separator,
 } from "components";
 import styles from "./Home.module.scss";
-import cn from "classnames";
 import { mockedData } from "mocked/trip";
 
 const Home = () => {
@@ -19,7 +18,6 @@ const Home = () => {
     <div>
       <Header />
       <div className={styles.container}>
-        <h1 className={cn(styles.title, styles.mainTitle)}>Home</h1>
         <SwiperCarousel
           data={{ title: "News", subtitle: "Catch up with Alpine" }}
         >

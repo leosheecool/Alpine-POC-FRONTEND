@@ -5,13 +5,16 @@ import PuffLoader from "react-spinners/PuffLoader";
 import { Trip } from "types/trip.types";
 import { mockedTrip } from "mocked/trip";
 import { ReactComponent as NavigationSvg } from "assets/vectors/navigation.svg";
+import { useNavigate } from "react-router-dom";
+import BackArrow from "components/BackArrow/BackArrow";
 
 const TripDetails = () => {
   const [trip, setTrip] = useState<Trip>(mockedTrip);
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 1500);
+    setTimeout(() => setIsLoading(false), 300);
   }, []);
 
   return (
@@ -20,6 +23,7 @@ const TripDetails = () => {
         <PuffLoader className={styles.loader} color="#0078c9" />
       ) : (
         <>
+          <BackArrow onClick={() => navigate("/home")} />
           <img
             src={trip.thumbnail}
             alt={trip.place}
@@ -65,15 +69,13 @@ const TripDetails = () => {
               </div>
             </div>
           </div>
-          <div className={styles.navContainer}>
-            <NavigationSvg
-              className={styles.navBtn}
-              fill="#FFF"
-              height={30}
-              width={30}
-            />
-            <span className={styles.subTitle}>Start Now</span>
-          </div>
+          <NavigationSvg
+            className={styles.navBtn}
+            fill="#FFF"
+            height={30}
+            width={30}
+            onClick={() => navigate("/GPS")}
+          />
         </>
       )}
 

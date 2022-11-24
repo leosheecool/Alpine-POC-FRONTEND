@@ -1,7 +1,7 @@
 import styles from "./BottomBar.module.scss";
-import { ReactComponent as MapSvg } from "assets/vectors/map-location.svg";
-import { ReactComponent as SettingsSvg } from "assets/vectors/settings.svg";
-import { ReactComponent as HomeSvg } from "assets/vectors/home.svg";
+import { ReactComponent as Route } from "assets/vectors/route.svg";
+import { ReactComponent as Comment } from "assets/vectors/comment.svg";
+import Logo from "assets/vectors/Logo.svg";
 import { NavLink } from "react-router-dom";
 import cn from "classnames";
 
@@ -15,15 +15,15 @@ const BottomBar = () => {
             cn(styles.menuBtn, { [styles.activeLink]: isActive })
           }
         >
-          <HomeSvg height={30} width={30} className={styles.icon} />
+          <Comment height={30} width={30} className={styles.icon} />
         </NavLink>
 
         <NavLink to={"/trips"} className={styles.menuBtn}>
-          <MapSvg height={30} width={30} className={styles.icon} />
+          <Route height={30} width={30} className={styles.icon} />
         </NavLink>
 
         <NavLink to={"/settings"} className={styles.menuBtn}>
-          <SettingsSvg height={30} width={30} className={styles.icon} />
+          <img src={Logo} alt="logo" className={styles.logo} />
         </NavLink>
       </div>
     </div>
