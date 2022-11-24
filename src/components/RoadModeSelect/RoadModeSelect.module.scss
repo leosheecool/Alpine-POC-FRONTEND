@@ -1,20 +1,24 @@
 @import 'styles/colors';
 
 .roadOptionsContainer {
-    margin: 10px 0;
+    margin-top: 10px ;
     display: flex;
     align-items: center;
-    background-color: red;
+    justify-content: space-around;
     height: 75px;
-    .options{
+    .option{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        &.isActive{
+            border-bottom: 3px solid $black;
+        }
         .icon {
-            height: 25px;
+            height: 30px;
         }
         .subTitle {
-            font: 500 16px/24px 'Roboto', sans-serif;
+            margin: 5px;
+            font: 500 14px 'Roboto', sans-serif;
             color: $black;
         }
     }

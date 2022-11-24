@@ -5,8 +5,23 @@ import { ReactComponent as BookmarkSvg } from "assets/vectors/bookmark.svg";
 
 export const roadModeMocked = [
   {
+    icon: BookmarkSvg,
+    value: "Bookmark",
+    isActive: false,
+  },
+  {
+    icon: RoadSvg,
+    value: "Road",
+    isActive: true,
+  },
+  {
+    icon: SeatSvg,
+    value: "Seat",
+    isActive: false,
+  },
+  {
     icon: NatureSvg,
     value: "Nature",
-    active: false,
+    isActive: false,
   },
 ];

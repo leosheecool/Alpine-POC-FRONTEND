@@ -1,0 +1,34 @@
+@import 'styles/colors';
+
+.container {
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    border: $border-shadow;
+    height: 56px;
+    border-radius: 2px;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.input {
+    padding-left: 10px;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font: 500 16px/24px 'Roboto', sans-serif;
+    &:focus {
+        outline: none;
+    }
+}
+
+.icon {
+    width:46px;
+    height: 40px;
+    padding: 8px;
+    &.iconBorder {
+        border-radius: 60px;
+        border: 1px solid black;
+    }
+}
