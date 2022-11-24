@@ -1,8 +1,3 @@
-import image_alonso from "assets/images/alpine_alonso.png";
-import image_laurent_rossi from "assets/images/laurent_rossi_alpine.png";
-import image_f1_racing from "assets/images/F1_racing.png";
-import image_f1_retro from "assets/images/Alpine_retro.jpg";
-
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css";
