@@ -1,0 +1,70 @@
+@import "styles/colors";
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  position: relative;
+  background-color: white;
+  padding: 32px;
+  min-width: 350px;
+  width: 60%;
+  height: 80vh;
+  border: 1px solid #ccc;
+  border-radius: 11px;
+  display: flex;
+  overflow: hidden;
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  &.fitContent {
+    height: fit-content;
+    width: max-content;
+  }
+  .title {
+    margin: 0;
+  }
+  .header {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 16px;
+    .closeBtn {
+      width: 40px;
+      padding-left: 16px;
+    }
+    .closeIcon {
+      width: 15px;
+    }
+  }
+  .subheader {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  .body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .footer {
+    text-align: center;
+  }
+}
+
+.iconContainer {
+  margin: 2px 16px 0 0;
+}
