@@ -6,6 +6,9 @@ import { ReactComponent as SpeedSvg } from "assets/vectors/speed.svg";
 import { ReactComponent as SpeedometerSvg } from "assets/vectors/speedometer.svg";
 import { ReactComponent as EuroSvg } from "assets/vectors/euro.svg";
 import IconInfo from "./IconInfo/IconInfo";
+import { useState } from "react";
+import { ReactComponent as SeatSvg } from "assets/vectors/seat.svg";
+import { ReactComponent as NatureSvg } from "assets/vectors/nature.svg";
 
 type Props = {
   title: string;
@@ -22,9 +25,23 @@ const TripDescription = ({
   likeNumber,
   isFavorite = false,
 }: Props) => {
+  const [isLiked, setIsLiked] = useState(false);
+
   return (
     <div className={styles.container}>
-      <h2>{title}</h2>
+      <div className={styles.header}>
+        <h2>{title}</h2>
+        <div className={styles.roadCategories}>
+          <div className={styles.roadCategory}>
+            <SeatSvg height={18} />
+            <p>Chill</p>
+          </div>
+          <div className={styles.roadCategory}>
+            <NatureSvg height={18} />
+            <p>Nature</p>
+          </div>
+        </div>
+      </div>
       <p className={styles.description}>{description}</p>
 
       <div className={styles.tripInfos}>
@@ -48,16 +65,21 @@ const TripDescription = ({
 
       <div className={styles.btnContainer}>
         <div className={styles.btn}>
-          <h3>{likeNumber}</h3>
+          <h3>{!isLiked ? likeNumber : likeNumber + 1}</h3>
           <p className={styles.subTitle}>Likes</p>
         </div>
         <div className={styles.btn}>
           <h3>{commentNumber}</h3>
           <p className={styles.subTitle}>Comments</p>
         </div>
-        <div className={styles.likeBtn}>
-          <p className={styles.textBtn}>{isFavorite ? "Unlike" : "Like"}</p>
-          {isFavorite ? (
+        <div
+          className={styles.likeBtn}
+          onClick={() => setIsLiked((prev) => !prev)}
+        >
+          <p className={styles.textBtn}>
+            {isFavorite || isLiked ? "Unlike" : "Like"}
+          </p>
+          {isFavorite || isLiked ? (
             <img src={activeHeart} alt="heart" />
           ) : (
             <img src={inactiveHeart} alt="heart" />

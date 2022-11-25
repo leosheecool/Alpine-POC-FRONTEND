@@ -1,14 +1,18 @@
 import React from "react";
-import backArrow from "assets/vectors/arrow-left-1 (1).svg";
+import { ReactComponent as BackArrowSvg } from "assets/vectors/arrow-left-1.svg";
 import styles from "./BackArrow.module.scss";
+import cn from "classnames";
 
 type Props = {
   onClick: () => void;
+  className?: string;
 };
 
-const BackArrow = ({ onClick }: Props) => {
+const BackArrow = ({ onClick, className }: Props) => {
   return (
-    <img src={backArrow} onClick={onClick} alt="back" className={styles.img} />
+    <div className={`${styles.container} ${className}`}>
+      <BackArrowSvg onClick={onClick} className={styles.img} fill="#FFF" />
+    </div>
   );
 };
 

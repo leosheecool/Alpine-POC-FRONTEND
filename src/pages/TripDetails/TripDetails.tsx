@@ -14,7 +14,6 @@ const TripDetails = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [currentZoomedImg, setCurrentZoomedImg] = useState<string>();
   const navigate = useNavigate();
-
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 300);
   }, []);
@@ -25,7 +24,10 @@ const TripDetails = () => {
         <PuffLoader className={styles.loader} color="#0078c9" />
       ) : (
         <>
-          <BackArrow onClick={() => navigate("/home")} />
+          <BackArrow
+            onClick={() => navigate(-1)}
+            className={styles.backArrow}
+          />
           <img
             src={trip.thumbnail}
             alt={trip.place}
