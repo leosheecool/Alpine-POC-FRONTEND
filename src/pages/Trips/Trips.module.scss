@@ -9,6 +9,21 @@
   background-color: $white;
   padding: 14px 24px;
 }
+.sheetBtn {
+    position: absolute;
+    bottom: 100px;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 2;
+    background-color: $darkGrey-1;
+    padding: 8px;
+    border-radius: 2px;
+
+    .subTitle {
+        font: 500 16px/16px 'AlpineNewAlps';
+        color: $white;
+    }
+}
 
 .modal {
     display: flex;
@@ -36,4 +51,9 @@
     display: grid;
     grid-template-columns: 1fr 15px 1fr 15px;
   }
+}
+
+.sheetContent {
+
+    overflow: scroll;
 }

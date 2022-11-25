@@ -1,10 +1,18 @@
 import styles from "./Trips.module.scss";
-import { BottomBar, SearchBar, RoadModeSelect, Map } from "components";
+import {
+  BottomBar,
+  SearchBar,
+  RoadModeSelect,
+  Map,
+  TripCard,
+} from "components";
 import { useState } from "react";
 import { roadModeMocked } from "mocked/roadMode";
 import { mockedSearchResults } from "mocked/trip";
 import Modal from "react-modal";
 import { filtersMapMocked } from "mocked/filtersMap";
+import Sheet from "react-modal-sheet";
+import { mockedData } from "mocked/trip";
 
 type Filter = {
   id: number;
@@ -22,6 +30,7 @@ const Trips = () => {
     isOpen: false,
     filters: filtersMapMocked,
   });
+  const [sheetModal, setSheetModal] = useState({ isOpen: true });
 
   const handleChangeSearchValue = (value: string) => {
     setSearchValue(value);
@@ -71,6 +80,12 @@ const Trips = () => {
           />
         </form>
       </div>
+      <div
+        className={styles.sheetBtn}
+        onClick={() => setSheetModal((prev) => ({ ...prev, isOpen: true }))}
+      >
+        <p className={styles.subTitle}>Show Trips</p>
+      </div>
       <Map results={searchResults} />
       <BottomBar />
       <Modal
@@ -97,6 +112,24 @@ const Trips = () => {
           ))}
         </div>
       </Modal>
+      <Sheet
+        isOpen={sheetModal.isOpen}
+        onClose={() => setSheetModal((prev) => ({ ...prev, isOpen: false }))}
+        detent="content-height"
+        snapPoints={[800, 700, 600, 500, 400, 300, 200, 100]}
+      >
+        <Sheet.Container>
+          <Sheet.Header />
+          <Sheet.Content>
+            <div className={styles.sheetContent}>
+              {mockedData.trips.map((trip) => (
+                <TripCard trip={trip} key={trip.id} />
+              ))}
+            </div>
+          </Sheet.Content>
+        </Sheet.Container>
+        <Sheet.Backdrop />
+      </Sheet>
     </div>
   );
 };
