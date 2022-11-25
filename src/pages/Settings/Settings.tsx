@@ -4,6 +4,9 @@ import styles from "./Settings.module.scss";
 import { useState } from "react";
 import { ColorPicker, useColor } from "react-color-palette";
 import "react-color-palette/lib/css/styles.css";
+import brakes from "assets/icons/brakes.png";
+import engineCoolant from "assets/icons/engine-coolant.png";
+import warning from "assets/vectors/warning.svg";
 
 const Settings = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
@@ -82,7 +85,7 @@ const Settings = () => {
             </div>
           </div>
           {/* Kilometrage + essence */}
-          <h3>Customization</h3>
+          <h3 className={styles.subtitle}>Customization</h3>
           <p>Choose your interior car's light:</p>
 
           <div className={styles.radioInputContainer}>
@@ -145,6 +148,35 @@ const Settings = () => {
           )}
 
           {/* list next part to check */}
+          <h3 className={styles.subtitle}>Parts to check</h3>
+          <div>
+            <div className={styles.partToCheckContainer}>
+              <img src={brakes} alt="brakes" className={styles.partImg} />
+              <div className={styles.partInfo}>
+                <p>Brakes</p>
+                <img
+                  src={warning}
+                  alt="warning"
+                  className={styles.warningIcon}
+                />
+              </div>
+            </div>
+            <div className={styles.partToCheckContainer}>
+              <img
+                src={engineCoolant}
+                alt="brakes"
+                className={styles.partImg}
+              />
+              <div className={styles.partInfo}>
+                <p>Engine coolant</p>
+                <img
+                  src="https://www.pngkey.com/png/full/10-108118_warning-sign-font-awesome-red-warning-flat-icon.png"
+                  alt="warning"
+                  className={styles.warningIcon}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       )}
       <BottomBar />

@@ -4,10 +4,17 @@
   padding: 20px;
 }
 
+.subtitle {
+  margin: 16px 0;
+  margin-top: 24px;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
 .carInfo {
   margin-top: 16px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
@@ -55,7 +62,31 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  margin: 0 0 30px 0;
+  margin: 0;
+  // margin: 0 0 30px 0;
+}
+
+.partToCheckContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  gap: 16px;
+  border-bottom: 1px solid $darkGrey;
+}
+
+.partImg {
+  height: 50px;
+  object-fit: cover;
+}
+
+.partInfo {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.warningIcon {
+  height: 24px;
 }
 
 // radio
