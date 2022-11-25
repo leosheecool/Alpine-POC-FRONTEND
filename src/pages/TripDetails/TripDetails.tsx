@@ -65,7 +65,11 @@ const TripDetails = () => {
             <div className={styles.card}>
               <h2 className={styles.title}>Journey Preview</h2>
               <div className={styles.journeyPreview}>
-                <Map results={trip.route} hasDirectionIndications={false} />
+                <Map
+                  results={trip.route}
+                  hasDirectionIndications={false}
+                  isItinerary
+                />
               </div>
             </div>
           </div>
