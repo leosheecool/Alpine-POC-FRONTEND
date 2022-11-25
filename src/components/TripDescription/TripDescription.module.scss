@@ -58,3 +58,23 @@
         font: 700 14px 'AlpineNewAlps', sans-serif;
     }
 }
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .roadCategories{
+        display: flex;
+        gap: 5px;
+    }
+    .roadCategory {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        gap: 4px;
+        border: 1px solid $black;
+        padding: 5px ;
+        border-radius: 2px;
+        font: 400 12px 'AlpineNewAlps', sans-serif;
+    }
+}

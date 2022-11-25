@@ -7,6 +7,8 @@ import { ReactComponent as SpeedometerSvg } from "assets/vectors/speedometer.svg
 import { ReactComponent as EuroSvg } from "assets/vectors/euro.svg";
 import IconInfo from "./IconInfo/IconInfo";
 import { useState } from "react";
+import { ReactComponent as SeatSvg } from "assets/vectors/seat.svg";
+import { ReactComponent as NatureSvg } from "assets/vectors/nature.svg";
 
 type Props = {
   title: string;
@@ -27,7 +29,19 @@ const TripDescription = ({
 
   return (
     <div className={styles.container}>
-      <h2>{title}</h2>
+      <div className={styles.header}>
+        <h2>{title}</h2>
+        <div className={styles.roadCategories}>
+          <div className={styles.roadCategory}>
+            <SeatSvg height={18} />
+            <p>Chill</p>
+          </div>
+          <div className={styles.roadCategory}>
+            <NatureSvg height={18} />
+            <p>Nature</p>
+          </div>
+        </div>
+      </div>
       <p className={styles.description}>{description}</p>
 
       <div className={styles.tripInfos}>
