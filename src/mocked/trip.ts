@@ -1,8 +1,18 @@
+import image_alonso from "assets/images/alpine_alonso.png";
+import image_laurent_rossi from "assets/images/laurent_rossi_alpine.png";
+import image_f1_racing from "assets/images/F1_racing.png";
+import image_f1_retro from "assets/images/Alpine_retro.jpg";
 import switzerland from "assets/images/Switzerland/1.jpg";
 import image_st_trip_start from "assets/images/shortTrip/trip_start.jpg";
 import image_st_step_1 from "assets/images/shortTrip/step_1.jpg";
 import image_st_step_2 from "assets/images/shortTrip/step_2.jpg";
 import image_st_trip_end from "assets/images/shortTrip/trip_end.jpg";
+import image_collines_de_champagne from "assets/images/TripCovers/collines_de_champagne.jpg";
+import image_chemin_indre from "assets/images/TripCovers/chemins_indre.webp";
+import image_autoroute_beauce from "assets/images/TripCovers/autoroute_de_beauce.jpg";
+import image_platanes_yvelines from "assets/images/TripCovers/platanes_yvelines.jpg";
+import image_pins_aquitaine from "assets/images/TripCovers/pins_aquitaine.jpg";
+import image_ponts_norvege from "assets/images/TripCovers/ponts_norvege.jpeg";
 
 export const mockedSearchResults = [
   {
@@ -245,60 +255,57 @@ export const mockedData = {
   trips: [
     {
       id: 0,
-      place: "Switzerland",
-      thumbnail: switzerland,
+      place: "Sillon de la Haute-Savoie",
+      thumbnail: image_st_trip_start,
       likeNumber: 100,
       commentNumber: 10,
       isFavorite: true,
     },
     {
       id: 1,
-      place: "Italy",
-      thumbnail:
-        "https://www.adventurouskate.com/wp-content/uploads/2022/05/Driving-in-Italy-scaled.jpg",
+      place: "Approche des Yvelines",
+      thumbnail: image_platanes_yvelines,
       likeNumber: 100,
       commentNumber: 10,
       isFavorite: true,
     },
     {
       id: 2,
-      place: "London",
-      thumbnail:
-        "https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg",
+      place: "Chemins de l'Indre",
+      thumbnail: image_chemin_indre,
       likeNumber: 100,
       commentNumber: 10,
       isFavorite: true,
     },
     {
       id: 3,
-      place: "London",
-      thumbnail:
-        "https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg",
+      place: "Au rythme des pins d'aquitaine",
+      thumbnail: image_pins_aquitaine,
       likeNumber: 100,
       commentNumber: 10,
       isFavorite: true,
     },
+
     {
       id: 4,
-      place: "London",
-      thumbnail:
-        "https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg",
+      place: "Lignes de la Beauce",
+      thumbnail: image_autoroute_beauce,
       likeNumber: 100,
       commentNumber: 10,
       isFavorite: true,
     },
+
     {
       id: 5,
-      place: "London",
-      thumbnail:
-        "https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg",
+      place: "Collines de champagne",
+      thumbnail: image_collines_de_champagne,
       likeNumber: 100,
       commentNumber: 10,
       isFavorite: true,
     },
     {
       id: 6,
-      place: "London",
+      place: "Forêt du Massif Central",
       thumbnail:
         "https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg",
       likeNumber: 100,
@@ -307,9 +314,8 @@ export const mockedData = {
     },
     {
       id: 7,
-      place: "London",
-      thumbnail:
-        "https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg",
+      place: "Ponts de norvège",
+      thumbnail: image_ponts_norvege,
       likeNumber: 100,
       commentNumber: 10,
       isFavorite: true,
@@ -317,47 +323,21 @@ export const mockedData = {
   ],
   news: [
     {
-      title: "ALPINE F1 TEAM : 4ÈME PUISSANCE DU CHAMPIONNAT À ABU DHABI",
-      image:
-        "https://lesalpinistes.com/wp-content/uploads/2022/11/Alpine-F1-Team-A522-Abu-Dhabi-Fernando-Alonso-Esteban-Ocon-2022-6-3840x2048.jpg.webp",
-      authorPicture:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW-D3wfBh_V5XWFQe5vNvxCJ0xsEmMaHL4IXRYcDPfmrD3M-Ey9y0GGAx54PnOXU0AsDk&usqp=CAU",
-    },
-    {
-      title: `Gasly "agréablement surpris" par son premier jour chez Alpine`,
-      image:
-        "https://cdn-1.motorsport.com/images/amp/YMdy47g2/s1000/pierre-gasly-alpine-a522-1.webp",
-      authorPicture:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrfTLkBrHxDjSUEjgfJWQUelcdWbluI1Co_Q9fZVgMMmb42WVjcSH0FvYRMeCSA9LvmDo&usqp=CAU",
-    },
-    {
-      title: "ALPINE A110 R 2022 : LA PLUS RADICALE DES FRANÇAISES 🇫🇷",
-      image:
-        "https://lesalpinistes.com/wp-content/uploads/2022/10/Alpine-A110-R-Cover-1920x1024.jpg",
-      authorPicture:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW-D3wfBh_V5XWFQe5vNvxCJ0xsEmMaHL4IXRYcDPfmrD3M-Ey9y0GGAx54PnOXU0AsDk&usqp=CAU",
-    },
-    {
       title:
-        "F1 : Fernando Alonso quitte Alpine, une catastrophe est inévitable ?",
+        "CEO Laurent Rossi shares the outlooks on the future of the alpine brand future",
       image:
-        "https://le10static.com/img/cache/article/576x324/0000/0021/216867.webp",
-      authorPicture:
-        "https://pbs.twimg.com/profile_images/1140959275424124928/W57PJtUh_400x400.png",
+        "https://france3-regions.francetvinfo.fr/image/mRBqCmpgMQ9feqWKvxo7zqUVEtY/600x400/regions/2020/06/09/5edf1c79ce34d_000_m55xb-2935921.jpg",
+      authorPicture: image_laurent_rossi,
     },
     {
-      title: "[Livre] Toutes les Alpine de route : les flèches de Dieppe",
-      image:
-        "https://www.automobile-sportive.com/images/news/Alpine-fleches-dieppe-livre.jpg",
-      authorPicture:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQmEBmrIHdMrnTcoRQtUeDRzanAnwYuf514M2l40zJtg&s",
+      title: "Programmation du mondial de l'auto",
+      image: image_f1_retro,
+      authorPicture: image_laurent_rossi,
     },
     {
-      title: `Alpine pourrait aider Williams en faisant rouler Sargeant`,
-      image:
-        "https://cdn-1.motorsport.com/images/amp/2GzrydE0/s1000/logan-sargeant-williams-fw44-1.webp",
-      authorPicture:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrfTLkBrHxDjSUEjgfJWQUelcdWbluI1Co_Q9fZVgMMmb42WVjcSH0FvYRMeCSA9LvmDo&usqp=CAU",
+      title: "Rassemblement des conducteurs de A110",
+      image: image_f1_racing,
+      authorPicture: image_alonso,
     },
   ],
 };
