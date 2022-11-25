@@ -21,7 +21,10 @@ type Filter = {
 };
 
 const Trips = () => {
-  const [roadOptions, setRoadOptions] = useState(roadModeMocked);
+  const [roadOptions, setRoadOptions] = useState({
+    options: roadModeMocked,
+    selected: "Populars",
+  });
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState<
     typeof mockedSearchResults
@@ -37,13 +40,13 @@ const Trips = () => {
   };
 
   const handleChangeRoadOption = (optionSelected: string) => {
-    const newOptions = roadOptions.map((option) => {
+    const newOptions = roadOptions.options.map((option) => {
       return {
         ...option,
         isActive: option.value === optionSelected,
       };
     });
-    setRoadOptions(newOptions);
+    setRoadOptions({ options: newOptions, selected: optionSelected });
   };
 
   const handleSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
@@ -75,7 +78,7 @@ const Trips = () => {
             }
           />
           <RoadModeSelect
-            options={roadOptions}
+            options={roadOptions.options}
             onChange={handleChangeRoadOption}
           />
         </form>
@@ -131,9 +134,15 @@ const Trips = () => {
           <Sheet.Header />
           <Sheet.Content>
             <div className={styles.sheetContent}>
-              {mockedData.trips.map((trip) => (
-                <TripCard trip={trip} key={trip.id} />
-              ))}
+              {mockedData.trips
+                .filter(
+                  (trip) =>
+                    roadOptions.selected === trip.category ||
+                    roadOptions.selected === "Populars"
+                )
+                .map((trip) => (
+                  <TripCard trip={trip} key={trip.id} />
+                ))}
             </div>
           </Sheet.Content>
         </Sheet.Container>
