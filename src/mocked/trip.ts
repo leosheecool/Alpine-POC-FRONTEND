@@ -1,7 +1,3 @@
-import image_alonso from "assets/images/alpine_alonso.png";
-import image_laurent_rossi from "assets/images/laurent_rossi_alpine.png";
-import image_f1_racing from "assets/images/F1_racing.png";
-import image_f1_retro from "assets/images/Alpine_retro.jpg";
 import switzerland from "assets/images/Switzerland/1.jpg";
 import image_st_trip_start from "assets/images/shortTrip/trip_start.jpg";
 import image_st_step_1 from "assets/images/shortTrip/step_1.jpg";
@@ -321,21 +317,47 @@ export const mockedData = {
   ],
   news: [
     {
-      title:
-        "CEO Laurent Rossi shares the outlooks on the future of the alpine brand future",
+      title: "ALPINE F1 TEAM : 4ÈME PUISSANCE DU CHAMPIONNAT À ABU DHABI",
       image:
-        "https://france3-regions.francetvinfo.fr/image/mRBqCmpgMQ9feqWKvxo7zqUVEtY/600x400/regions/2020/06/09/5edf1c79ce34d_000_m55xb-2935921.jpg",
-      authorPicture: image_laurent_rossi,
+        "https://lesalpinistes.com/wp-content/uploads/2022/11/Alpine-F1-Team-A522-Abu-Dhabi-Fernando-Alonso-Esteban-Ocon-2022-6-3840x2048.jpg.webp",
+      authorPicture:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW-D3wfBh_V5XWFQe5vNvxCJ0xsEmMaHL4IXRYcDPfmrD3M-Ey9y0GGAx54PnOXU0AsDk&usqp=CAU",
     },
     {
-      title: "Programmation du mondial de l'auto",
-      image: image_f1_retro,
-      authorPicture: image_laurent_rossi,
+      title: `Gasly "agréablement surpris" par son premier jour chez Alpine`,
+      image:
+        "https://cdn-1.motorsport.com/images/amp/YMdy47g2/s1000/pierre-gasly-alpine-a522-1.webp",
+      authorPicture:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrfTLkBrHxDjSUEjgfJWQUelcdWbluI1Co_Q9fZVgMMmb42WVjcSH0FvYRMeCSA9LvmDo&usqp=CAU",
     },
     {
-      title: "Rassemblement des conducteurs de A110",
-      image: image_f1_racing,
-      authorPicture: image_alonso,
+      title: "ALPINE A110 R 2022 : LA PLUS RADICALE DES FRANÇAISES 🇫🇷",
+      image:
+        "https://lesalpinistes.com/wp-content/uploads/2022/10/Alpine-A110-R-Cover-1920x1024.jpg",
+      authorPicture:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW-D3wfBh_V5XWFQe5vNvxCJ0xsEmMaHL4IXRYcDPfmrD3M-Ey9y0GGAx54PnOXU0AsDk&usqp=CAU",
+    },
+    {
+      title:
+        "F1 : Fernando Alonso quitte Alpine, une catastrophe est inévitable ?",
+      image:
+        "https://le10static.com/img/cache/article/576x324/0000/0021/216867.webp",
+      authorPicture:
+        "https://pbs.twimg.com/profile_images/1140959275424124928/W57PJtUh_400x400.png",
+    },
+    {
+      title: "[Livre] Toutes les Alpine de route : les flèches de Dieppe",
+      image:
+        "https://www.automobile-sportive.com/images/news/Alpine-fleches-dieppe-livre.jpg",
+      authorPicture:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQmEBmrIHdMrnTcoRQtUeDRzanAnwYuf514M2l40zJtg&s",
+    },
+    {
+      title: `Alpine pourrait aider Williams en faisant rouler Sargeant`,
+      image:
+        "https://cdn-1.motorsport.com/images/amp/2GzrydE0/s1000/logan-sargeant-williams-fw44-1.webp",
+      authorPicture:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrfTLkBrHxDjSUEjgfJWQUelcdWbluI1Co_Q9fZVgMMmb42WVjcSH0FvYRMeCSA9LvmDo&usqp=CAU",
     },
   ],
 };
