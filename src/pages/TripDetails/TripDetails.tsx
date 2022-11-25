@@ -7,10 +7,12 @@ import { mockedTrip } from "mocked/trip";
 import { ReactComponent as NavigationSvg } from "assets/vectors/navigation.svg";
 import { useNavigate } from "react-router-dom";
 import BackArrow from "components/BackArrow/BackArrow";
+import Modal from "components/Modal/Modal";
 
 const TripDetails = () => {
   const [trip, setTrip] = useState<Trip>(mockedTrip);
   const [isLoading, setIsLoading] = useState(true);
+  const [currentZoomedImg, setCurrentZoomedImg] = useState<string>();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -57,6 +59,7 @@ const TripDetails = () => {
                       src={picture}
                       alt="trip preview"
                       className={styles.picture}
+                      onClick={() => setCurrentZoomedImg(picture)}
                     />
                   ))}
                 </div>
@@ -82,6 +85,14 @@ const TripDetails = () => {
           />
         </>
       )}
+
+      <Modal
+        fitContent
+        isOpen={!!currentZoomedImg}
+        onRequestClose={() => setCurrentZoomedImg(undefined)}
+      >
+        <img src={currentZoomedImg} alt="zoomed" style={{ maxWidth: "100%" }} />
+      </Modal>
 
       <BottomBar />
     </div>
