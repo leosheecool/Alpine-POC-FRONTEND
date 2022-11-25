@@ -1,5 +1,5 @@
 import React from "react";
-import backArrow from "assets/vectors/arrow-left-1 (1).svg";
+import { ReactComponent as BackArrowSvg } from "assets/vectors/arrow-left-1.svg";
 import styles from "./BackArrow.module.scss";
 
 type Props = {
@@ -8,7 +8,9 @@ type Props = {
 
 const BackArrow = ({ onClick }: Props) => {
   return (
-    <img src={backArrow} onClick={onClick} alt="back" className={styles.img} />
+    <div className={styles.container}>
+      <BackArrowSvg onClick={onClick} className={styles.img} fill="#FFF" />
+    </div>
   );
 };
 
