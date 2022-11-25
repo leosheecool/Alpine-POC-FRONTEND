@@ -6,6 +6,7 @@ import { ReactComponent as SpeedSvg } from "assets/vectors/speed.svg";
 import { ReactComponent as SpeedometerSvg } from "assets/vectors/speedometer.svg";
 import { ReactComponent as EuroSvg } from "assets/vectors/euro.svg";
 import IconInfo from "./IconInfo/IconInfo";
+import { useState } from "react";
 
 type Props = {
   title: string;
@@ -22,6 +23,8 @@ const TripDescription = ({
   likeNumber,
   isFavorite = false,
 }: Props) => {
+  const [isLiked, setIsLiked] = useState(false);
+
   return (
     <div className={styles.container}>
       <h2>{title}</h2>
@@ -48,16 +51,21 @@ const TripDescription = ({
 
       <div className={styles.btnContainer}>
         <div className={styles.btn}>
-          <h3>{likeNumber}</h3>
+          <h3>{!isLiked ? likeNumber : likeNumber + 1}</h3>
           <p className={styles.subTitle}>Likes</p>
         </div>
         <div className={styles.btn}>
           <h3>{commentNumber}</h3>
           <p className={styles.subTitle}>Comments</p>
         </div>
-        <div className={styles.likeBtn}>
-          <p className={styles.textBtn}>{isFavorite ? "Unlike" : "Like"}</p>
-          {isFavorite ? (
+        <div
+          className={styles.likeBtn}
+          onClick={() => setIsLiked((prev) => !prev)}
+        >
+          <p className={styles.textBtn}>
+            {isFavorite || isLiked ? "Unlike" : "Like"}
+          </p>
+          {isFavorite || isLiked ? (
             <img src={activeHeart} alt="heart" />
           ) : (
             <img src={inactiveHeart} alt="heart" />
