@@ -96,27 +96,34 @@ const Trips = () => {
         <h2 className={styles.modalTitle}>Filtres</h2>
 
         <div className={styles.modalContent}>
-          {modal.filters.map((filter) => (
-            <>
-              <label className={styles.modalFilterTitle} htmlFor={filter.name}>
-                {filter.name}
-              </label>
-              <input
-                type="checkbox"
-                id={filter.name}
-                name={filter.name}
-                checked={filter.isActive}
-                onChange={() => handleFilterClick(filter)}
-              />
-            </>
-          ))}
+          {modal.filters.map((filter) => {
+            const Icon = filter.icon;
+            return (
+              <>
+                <Icon height={20} width={20} style={{ marginRight: 20 }} />
+                <label
+                  className={styles.modalFilterTitle}
+                  htmlFor={filter.name}
+                >
+                  {filter.name}
+                </label>
+                <input
+                  type="checkbox"
+                  id={filter.name}
+                  name={filter.name}
+                  checked={filter.isActive}
+                  onChange={() => handleFilterClick(filter)}
+                />
+              </>
+            );
+          })}
         </div>
       </Modal>
       <Sheet
         isOpen={sheetModal.isOpen}
         onClose={() => setSheetModal((prev) => ({ ...prev, isOpen: false }))}
-        detent="content-height"
-        snapPoints={[800, 700, 600, 500, 400, 300, 200, 100]}
+        snapPoints={[1300, 1100, 950, 800, 700, 600, 500, 400, 300, 200, 100]}
+        initialSnap={1}
       >
         <Sheet.Container>
           <Sheet.Header />
@@ -128,7 +135,7 @@ const Trips = () => {
             </div>
           </Sheet.Content>
         </Sheet.Container>
-        <Sheet.Backdrop />
+        {/* <Sheet.Backdrop /> */}
       </Sheet>
     </div>
   );
