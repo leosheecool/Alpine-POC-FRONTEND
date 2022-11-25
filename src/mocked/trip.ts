@@ -4,6 +4,169 @@ import image_f1_racing from "assets/images/F1_racing.png";
 import image_f1_retro from "assets/images/Alpine_retro.jpg";
 import switzerland from "assets/images/Switzerland/1.jpg";
 
+export const mockedSearchResults = [
+  {
+    coordinates: {
+      lat: 48.16491,
+      lon: 7.079503,
+    },
+    name: "D61, Col du Louschbach",
+    address: "1 Col du Bonhomme, 88230 Plainfaing, France",
+  },
+  {
+    coordinates: {
+      lat: 47.817446,
+      lon: 7.179241,
+    },
+    name: "Uffholtz > Grand Ballon",
+    address: "35 Rue de Soultz, 68700 Uffholtz, France",
+  },
+  {
+    coordinates: {
+      lat: 47.055658,
+      lon: 7.060931,
+    },
+    name: "Col de Chasseral",
+    address: "Rue des Prés-Bugnon 10, 2525 Le Landeron, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 46.902066,
+      lon: 6.578923,
+    },
+    name: "Le Faubourg",
+    address: "Rue du Pré, 2114 Fleurier, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 46.358469,
+      lon: 6.977051,
+    },
+    name: "Route des agites",
+    address: "Rte des Agittes 16, 1856 Corbeyrier, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 46.619568,
+      lon: 7.377361,
+    },
+    name: "Jaunpass",
+    address: "Bifang 316A 3766 Boltigen, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 46.808928,
+      lon: 7.477394,
+    },
+    name: "Gurnigel Pass",
+    address: "Gurnigelstrasse 9, 3132 Riggisberg, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 46.781843,
+      lon: 7.635391,
+    },
+    name: "Gurnigel Pass",
+    address: "Steffisburg 3612, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 46.991432,
+      lon: 8.065955,
+    },
+    name: "Gurnigel Pass",
+    address: "Steffisburg 3612, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 46.704765,
+      lon: 8.229666,
+    },
+    name: "Gurnigel Pass",
+    address: "Steffisburg 3612, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 46.562344,
+      lon: 8.361785,
+    },
+    name: "Gurnigel Pass",
+    address: "Steffisburg 3612, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 46.617517,
+      lon: 8.565992,
+    },
+    name: "Gurnigel Pass",
+    address: "Steffisburg 3612, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 46.506852,
+      lon: 8.306979,
+    },
+    name: "Gurnigel Pass",
+    address: "Steffisburg 3612, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 46.392156,
+      lon: 8.123838,
+    },
+    name: "Gurnigel Pass",
+    address: "Steffisburg 3612, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 46.355653,
+      lon: 9.219933,
+    },
+    name: "Gurnigel Pass",
+    address: "Steffisburg 3612, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 46.524284,
+      lon: 9.185605,
+    },
+    name: "Gurnigel Pass",
+    address: "Steffisburg 3612, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 46.690332,
+      lon: 9.440671,
+    },
+    name: "Gurnigel Pass",
+    address: "Steffisburg 3612, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 47.002453,
+      lon: 9.500531,
+    },
+    name: "Gurnigel Pass",
+    address: "Steffisburg 3612, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 47.169259,
+      lon: 9.488295,
+    },
+    name: "Gurnigel Pass",
+    address: "Steffisburg 3612, Suisse",
+  },
+  {
+    coordinates: {
+      lat: 46.875033,
+      lon: 8.655996,
+    },
+    name: "Gurnigel Pass",
+    address: "Steffisburg 3612, Suisse",
+  },
+];
+
 export const mockedTrip = {
   id: 0,
   place: "Switzerland",

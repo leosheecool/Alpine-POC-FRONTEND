@@ -26,6 +26,7 @@ type Props = {
   selectedWaypoints?: mapboxgl.LngLatLike[];
   zoom?: number;
   hasDirectionIndications?: boolean;
+  isItinerary?: boolean;
 };
 
 const Map = ({
@@ -34,6 +35,7 @@ const Map = ({
   selectedWaypoints,
   zoom = 9,
   hasDirectionIndications = true,
+  isItinerary = false,
 }: Props) => {
   const mapNode = useRef(null);
 
@@ -156,7 +158,7 @@ const Map = ({
         mapboxMap.getCanvas().style.cursor = "";
         popup.remove();
       });
-      if (!results || results?.length < 2) return;
+      if (!results || results?.length < 2 || !isItinerary) return;
       directions.setOrigin([
         results[0].coordinates.lon,
         results[0].coordinates.lat,
@@ -173,7 +175,7 @@ const Map = ({
         results[waypointsLength - 1].coordinates.lat,
       ]);
     },
-    [results, directions]
+    [results, directions, isItinerary]
   );
 
   React.useEffect(() => {
@@ -191,14 +193,16 @@ const Map = ({
     });
 
     if (!results) return;
-    mapboxMap.addControl(directions, "top-left");
-    const control = document.getElementsByClassName(
-      "mapboxgl-control-container"
-    )[0];
-    if (!hasDirectionIndications) {
-      try {
-        control?.classList.add(styles.hideDirection);
-      } catch {}
+    if (isItinerary) {
+      mapboxMap.addControl(directions, "top-left");
+      const control = document.getElementsByClassName(
+        "mapboxgl-control-container"
+      )[0];
+      if (!hasDirectionIndications) {
+        try {
+          control?.classList.add(styles.hideDirection);
+        } catch {}
+      }
     }
     mapboxMap.on("load", () => onLoad(mapboxMap, results));
 
@@ -214,6 +218,7 @@ const Map = ({
     zoom,
     selectedWaypoints,
     hasDirectionIndications,
+    isItinerary,
   ]);
 
   return (
