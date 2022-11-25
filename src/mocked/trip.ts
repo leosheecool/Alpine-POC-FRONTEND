@@ -260,6 +260,7 @@ export const mockedData = {
       likeNumber: 100,
       commentNumber: 10,
       isFavorite: true,
+      category: "Nature",
     },
     {
       id: 1,
@@ -268,6 +269,7 @@ export const mockedData = {
       likeNumber: 100,
       commentNumber: 10,
       isFavorite: true,
+      category: "Chill",
     },
     {
       id: 2,
@@ -276,6 +278,7 @@ export const mockedData = {
       likeNumber: 100,
       commentNumber: 10,
       isFavorite: true,
+      category: "Speed",
     },
     {
       id: 3,
@@ -284,6 +287,7 @@ export const mockedData = {
       likeNumber: 100,
       commentNumber: 10,
       isFavorite: true,
+      category: "Nature",
     },
 
     {
@@ -293,6 +297,7 @@ export const mockedData = {
       likeNumber: 100,
       commentNumber: 10,
       isFavorite: true,
+      category: "Speed",
     },
 
     {
@@ -302,6 +307,7 @@ export const mockedData = {
       likeNumber: 100,
       commentNumber: 10,
       isFavorite: true,
+      category: "Chill",
     },
     {
       id: 6,
@@ -311,6 +317,7 @@ export const mockedData = {
       likeNumber: 100,
       commentNumber: 10,
       isFavorite: true,
+      category: "Nature",
     },
     {
       id: 7,
@@ -319,6 +326,7 @@ export const mockedData = {
       likeNumber: 100,
       commentNumber: 10,
       isFavorite: true,
+      category: "Chill",
     },
   ],
   news: [
