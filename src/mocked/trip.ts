@@ -3,6 +3,10 @@ import image_laurent_rossi from "assets/images/laurent_rossi_alpine.png";
 import image_f1_racing from "assets/images/F1_racing.png";
 import image_f1_retro from "assets/images/Alpine_retro.jpg";
 import switzerland from "assets/images/Switzerland/1.jpg";
+import image_st_trip_start from "assets/images/shortTrip/trip_start.jpg";
+import image_st_step_1 from "assets/images/shortTrip/step_1.jpg";
+import image_st_step_2 from "assets/images/shortTrip/step_2.jpg";
+import image_st_trip_end from "assets/images/shortTrip/trip_end.jpg";
 
 export const mockedSearchResults = [
   {
@@ -175,31 +179,21 @@ export const mockedTrip = {
   commentNumber: 3,
   route: [
     {
-      coordinates: { lat: 46.13797, lon: 6.110138 },
-      address: "Rue de la Gare 1, 1003 Lausanne, Switzerland",
-      name: "Lausanne",
-    },
-    {
-      coordinates: { lat: 46.140235, lon: 6.10727 },
-    },
-    {
-      coordinates: { lat: 46.13953, lon: 6.104598 },
-    },
-    {
-      image: "https://static.freeimages.com/images/home/filetypes/photo.png",
-      coordinates: { lat: 46.13953, lon: 6.104598 },
+      coordinates: { lat: 46.363623, lon: 6.517751 },
+      address: "315 Rte des Grandes Alpes, 74500 Féternes",
+      name: "Féternes",
     },
     {
       address: "Rue de la Gare 1, 1003 Lausanne, Switzerland",
       name: "Lausanne",
-      coordinates: { lat: 46.142512, lon: 6.098811 },
+      coordinates: { lat: 46.133837, lon: 6.626808 },
     },
   ],
   pictures: [
-    "https://img-4.linternaute.com/t4CHV7jImJOko9OIw7Zi4AEp5DM=/660x366/smart/fe4cdc42c6704f0999801738a2d474d9/ccmcms-linternaute/13287800.jpg",
-    "https://st.depositphotos.com/1002772/1249/i/600/depositphotos_12499363-stock-photo-swiss-flag.jpg",
-    "https://cdn.britannica.com/82/195482-050-2373E635/Amalfi-Italy.jpg",
-    "https://i.f1g.fr/media/cms/orig/2022/07/07/ca661a2428e7ea8165d11c83cea709e04c6fc53faf09b4fbb8f08b9ccda5ea2a.jpg",
+    image_st_trip_start,
+    image_st_step_1,
+    image_st_step_2,
+    image_st_trip_end,
   ],
   playlists: {
     deezer: "https://www.deezer.com/en/playlist/1060000000",
