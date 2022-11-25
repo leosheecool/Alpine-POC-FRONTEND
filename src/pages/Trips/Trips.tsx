@@ -122,7 +122,9 @@ const Trips = () => {
       <Sheet
         isOpen={sheetModal.isOpen}
         onClose={() => setSheetModal((prev) => ({ ...prev, isOpen: false }))}
-        snapPoints={[1300, 1100, 950, 800, 700, 600, 500, 400, 300, 200, 100]}
+        snapPoints={[
+          1300, 1100, 950, 800, 700, 600, 500, 400, 300, 200, 100, 0,
+        ]}
         initialSnap={1}
       >
         <Sheet.Container>

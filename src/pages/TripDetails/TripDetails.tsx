@@ -24,7 +24,10 @@ const TripDetails = () => {
         <PuffLoader className={styles.loader} color="#0078c9" />
       ) : (
         <>
-          <BackArrow onClick={() => navigate(-1)} />
+          <BackArrow
+            onClick={() => navigate(-1)}
+            className={styles.backArrow}
+          />
           <img
             src={trip.thumbnail}
             alt={trip.place}

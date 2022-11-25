@@ -4,9 +4,7 @@
 .container {
   height: 35px;
   width: 35px;
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  padding: 6px;
   background-color: $black;
   display: flex;
   justify-content: center;
