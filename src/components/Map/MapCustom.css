@@ -1,3 +1,7 @@
 .mapbox-directions-component-keyline {
   display: none;
 }
+
+.mapbox-directions-instructions-wrapper {
+  max-height: 210px !important;
+}

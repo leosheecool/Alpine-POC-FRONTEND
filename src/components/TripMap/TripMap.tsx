@@ -20,6 +20,7 @@ const Tripmap = () => {
         //   hotel.coordinate.lat,
         // ])}
         results={mockedTrip.route}
+        isItinerary
       />
     </div>
   );
